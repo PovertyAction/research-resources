@@ -4,6 +4,7 @@
 /.ruff_cache/
 /.venv/
 /assets/data/*.csv
+!/assets/data/penguins.csv
 /assets/data/*.parquet
 /assets/data/*.dta
 
