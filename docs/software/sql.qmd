@@ -22,7 +22,7 @@ Create a table from a CSV file.
 
 ```{python}
 %%sql
-CREATE TABLE penguins AS SELECT * FROM '../assets/data/penguins.csv'
+CREATE TABLE penguins AS SELECT * FROM '../../assets/data/penguins.csv'
 ```
 
 Inspect the columns of the table.
@@ -36,7 +36,7 @@ Query the table using a `SELECT` statement.
 ```{python}
 %%sql
 SELECT *
-FROM '../assets/data/penguins.csv'
+FROM '../../assets/data/penguins.csv'
 LIMIT 3
 ```
 
@@ -45,7 +45,7 @@ Run analytical operations on the data.
 ```{python}
 %%sql
 SELECT species, COUNT(*) AS count
-FROM '../assets/data/penguins.csv'
+FROM '../../assets/data/penguins.csv'
 GROUP BY species
 ORDER BY count DESC
 ```
@@ -55,7 +55,7 @@ Using `jupysql` store SQL query results as an object in a Jupyter notebook.
 ```{python}
 %%sql species_count <<
 SELECT species, COUNT(*) AS count
-FROM '../assets/data/penguins.csv'
+FROM '../../assets/data/penguins.csv'
 GROUP BY species
 ORDER BY count DESC
 ```
@@ -63,7 +63,7 @@ ORDER BY count DESC
 Plot the results of the query.
 
 ```{python}
-ax = %sqlplot bar --table '../assets/data/penguins.csv' --column species
+ax = %sqlplot bar --table '../../assets/data/penguins.csv' --column species
 
 # customize plot (this is a matplotlib Axes object)
 _ = ax.set_title("Count of penguins by species")
