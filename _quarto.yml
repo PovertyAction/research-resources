@@ -13,10 +13,10 @@ website:
     position: above-navbar
     type: warning
     icon: cone-striped
-  description:  "Handbook for common, shared practices for data science and engineering at Innovations for Poverty Action."
+  description:  "Research, Software, and Data Resources from Innovations for Poverty Action."
   favicon: ./assets/images/IPA-primary-full-color-abbreviated.png
   # site-url: https://research.poverty-action.org
-  repo-url: https://github.com/PovertyAction/ipa-data-tech-handbook
+  repo-url: https://github.com/PovertyAction/research-resources
   repo-actions: [edit, issue]
   page-navigation: true
   bread-crumbs: true
@@ -45,65 +45,134 @@ website:
         href: https://github.com/PovertyAction/ipa-data-tech-handbook
         aria-label: IPA GitHub
       # - icon: rss
-        # href: https://povertyaction.github.io/ipa-data-tech-handbook/docs/blog/index.xml
-        # aria-label: IPA Blog RSS
-  sidebar:
+        # href: https://povertyaction.github.io/research/blog/index.xml
+        # aria-label: IPA Data Research Blog RSS
+  navbar:
     background: '#155240'
     foreground: '#ffffff'
     logo: ./assets/images/IPA-primary-white-abbreviated.png
-    collapse-level: 1
-    search: true
-    style: "docked"
-    contents:
-      - href: index.qmd
-        text: Home
-
-      - section: Guides
-        contents:
-        - href: ./guides/computer_setup.qmd
-          text: Computer Setup
-        - href: ./guides/venv.qmd
-          text: Virtual Environments
-        - href: ./guides/code_review.qmd
-          text: Code Review
-        - href: ./guides/pre_commit_hooks.qmd
-          text: pre-commit
-
-      - section: Software
-        contents:
-          - href: ./software/git.qmd
-            text: Git
-          - href: ./software/github.qmd
-            text: GitHub
-          - href: ./software/vscode.qmd
-            text: VS Code
-          - href: ./software/quarto.qmd
-            text: Quarto
-          - href: ./software/python.qmd
-            text: Python
-          - href: ./software/stata.qmd
-            text: Stata
-          - href: ./software/sql.qmd
-            text: SQL
-
-      - section: Methods
-        contents:
-          - href: ./methods/references.qmd
-            text: References
-
-      - section: Teams
-        contents:
-          - href: ./teams/dse.qmd
+    # logo: quarto.png
+    # logo-alt: "Quarto logo."
+    title: false
+    collapse-below: lg
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "About"
+        href: docs/about/index.qmd
+      - text: "Guides"
+        href: docs/guides/index.qmd
+      - text: "Software"
+        href: docs/software/index.qmd
+      - text: "Methods"
+        href: docs/methods/index.qmd
+    right:
+      - text: "IPA Teams"
+        menu:
+          - href: docs/teams/dse.qmd
             text: DSE
-          - href: ./teams/grds.qmd
+          - href: docs/teams/grds.qmd
             text: GRDS
-          - href: ./teams/mist.qmd
+          - href: docs/teams/mist.qmd
             text: MIST
-          - href: ./teams/ppi.qmd
+          - href: docs/teams/ppi.qmd
             text: PPI
 
-      - href: ./contributing.qmd
-        text: Contributing
+      - text: "Contributing"
+        href: ./contributing.qmd
+      - icon: github
+        href: https://github.com/PovertyAction/ipa-data-tech-handbook
+        aria-label: IPA GitHub
+
+  sidebar:
+    # background: '#155240'
+    # foreground: '#ffffff'
+
+    - id: about
+      style: "floating"
+      collapse-level: 2
+      align: left
+
+      contents:
+        - section: "About"
+          href: docs/about/index.qmd
+          contents:
+          - text: "Foundations"
+            href: docs/about/foundations.qmd
+          - text: "Minimum Must Dos"
+            href: docs/about/mmds.qmd
+          - text: "For IPA Researchers"
+            href: docs/about/ipa_researchers.qmd
+          - text: "For IPA staff"
+            href: docs/about/ipa_staff.qmd
+
+
+    - id: guides
+      collapse-level: 1
+      contents:
+        - section: "Guides"
+          href: docs/guides/index.qmd
+          contents:
+            - text: "Coding Best Practices"
+              href: docs/guides/coding_best_practices.qmd
+            - text: "Code Review"
+              href: docs/guides/code_review.qmd
+
+    - id: software
+      collapse-level: 3
+      contents:
+        - section: "Software"
+          href: docs/software/index.qmd
+          contents:
+            - section: "Programming"
+              contents:
+                - text: "Python"
+                  href: docs/software/python.qmd
+                - text: "Stata"
+                  href: docs/software/stata.qmd
+                - text: "SQL"
+                  href: docs/software/sql.qmd
+
+            - section: "Data Collection"
+              contents:
+                - section: "SurveyCTO"
+                  contents:
+                    - text: "About SurveyCTO"
+                      href: docs/software/surveycto/index.md
+                    - text: "SurveyCTO: Best Practices"
+                      href: docs/software/surveycto/scto_best_practices.qmd
+                    - text: "SurveyCTO: IPA Tools"
+                      href: docs/software/surveycto/scto_tools.qmd
+
+            - section: Tools
+              contents:
+                - text: "Computer Setup"
+                  href: docs/software/computer_setup.qmd
+                - text: "Virtual Environments"
+                  href: docs/software/venv.qmd
+                - text: "Git"
+                  href: docs/software/git.qmd
+                - text: "GitHub"
+                  href: docs/software/github.qmd
+                - text: "VS Code"
+                  href: docs/software/vscode.qmd
+                - text: "Quarto"
+                  href: docs/software/quarto.qmd
+                - text: "Just"
+                  href: docs/software/justfile.qmd
+                - text: "Pre-commit"
+                  href: docs/software/pre_commit_hooks.qmd
+
+    - id: methods
+      collapse-level: 2
+      contents:
+        - section: "Methods"
+          href: docs/methods/index.qmd
+          contents:
+            - text: "Machine Learning"
+              href: docs/methods/ml.qmd
+            - text: "References"
+              href: docs/methods/references.qmd
 
 # bibliography: ./assets/references.bib
 
