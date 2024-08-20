@@ -18,7 +18,6 @@ system-info:
 
 # Clean venv
 clean:
-    pixi run RScript -e 'renv::clean()'
     rm -rf .pixi/envs
 
 # Setup environment
@@ -28,14 +27,12 @@ get-started: pre-install venv
 update-reqs:
     pixi update
     pre-commit autoupdate
-    pixi run RScript -e 'renv::install()'
 
 # create virtual environment
 venv:
     pixi install
     pixi global install pre-commit
     pre-commit install
-    pixi run RScript -e 'renv::restore()'
 
 activate-venv:
     pixi shell
