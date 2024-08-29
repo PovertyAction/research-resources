@@ -74,7 +74,9 @@ website:
         href: docs/ethics_&_data_security/index.qmd
       - text: "Measurement & Survey Design"
         href: docs/measurement_&_survey_design/index.qmd
-      - text: "Publication & Policy Methods"
+      - text: "Research Design"
+        href: docs/research_design/index.qmd
+      - text: "Publication & Policy"
         href: docs/publication_&_policy/index.qmd
       
     right:
@@ -201,6 +203,36 @@ website:
               href: docs/data_collection_methods/launching_a_whatsapp_survey.qmd
             - text: "Encryption And Data Security In WhatsApp Surveys"
               href: docs/data_collection_methods/encryption_and_data_security_in_whatsapp_surveys.qmd
+
+    - id: data_management
+      collapse-level: 2
+      contents:
+        - section: "Data Management"
+          href: docs/data_management/index.qmd
+    
+    - id: ethics_&_data_security
+      collapse-level: 2
+      contents:
+        - section: "Ethics & Data Security"
+          href: docs/ethics_&_data_security/index.qmd
+
+    - id: measurement_&_survey_design
+      collapse-level: 2
+      contents:
+        - section: "Measurement & Survey Design"
+          href: docs/measurement_&_survey_design/index.qmd
+      
+    - id: research_design
+      collapse-level: 2
+      contents:
+        - section: "Research Design"
+          href: docs/research_design/index.qmd
+
+    - id: publication_&_policy
+      collapse-level: 2
+      contents:
+        - section: "Publication & Policy"
+          href: docs/publication_&_policy/index.qmd
 
 # bibliography: ./assets/references.bib
 
