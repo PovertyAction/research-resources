@@ -60,14 +60,23 @@ website:
         href: index.qmd
       - text: "About"
         href: docs/about/index.qmd
-      - text: "Guides"
-        href: docs/guides/index.qmd
-      - text: "Software"
-        href: docs/software/index.qmd
-      - text: "Methods"
-        href: docs/methods/index.qmd
+      # - text: "Guides"
+      #   href: docs/guides/index.qmd
+      # - text: "Software"
+      #   href: docs/software/index.qmd
+      # - text: "Methods"
+      #   href: docs/methods/index.qmd
       - text: "Data Collection Methods"
         href: docs/data_collection_methods/index.qmd
+      - text: "Data Management"
+        href: docs/data_management/index.qmd
+      - text: "Ethics & Data Security"
+        href: docs/ethics_&_data_security/index.qmd
+      - text: "Measurement & Survey Design"
+        href: docs/measurement_&_survey_design/index.qmd
+      - text: "Publication & Policy Methods"
+        href: docs/publication_&_policy/index.qmd
+      
     right:
       - text: "IPA Teams"
         menu:
