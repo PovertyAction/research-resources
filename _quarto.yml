@@ -66,6 +66,8 @@ website:
         href: docs/software/index.qmd
       - text: "Methods"
         href: docs/methods/index.qmd
+      - text: "Data Collection Methods"
+        href: docs/data_collection_methods/index.qmd
     right:
       - text: "IPA Teams"
         menu:
@@ -173,6 +175,23 @@ website:
               href: docs/methods/ml.qmd
             - text: "References"
               href: docs/methods/references.qmd
+
+    - id: data_collection_methods
+      collapse-level: 2
+      contents:
+        - section: "Data Collection Methods"
+          href: docs/data_collection_methods/index.qmd
+          contents:
+            - text: "Getting Started With WhatsApp Surveys"
+              href: docs/data_collection_methods/getting_started_with_whatsapp_surveys.qmd
+            - text: "The Twilio Console"
+              href: docs/data_collection_methods/the_twilio_console.qmd
+            - text: "How To Program A WhatsApp Survey"
+              href: docs/data_collection_methods/how_to_program_a_whatsapp_survey.qmd
+            - text: "Launching A WhatsApp Survey"
+              href: docs/data_collection_methods/launching_a_whatsapp_survey.qmd
+            - text: "Encryption And Data Security In WhatsApp Surveys"
+              href: docs/data_collection_methods/encryption_and_data_security_in_whatsapp_surveys.qmd
 
 # bibliography: ./assets/references.bib
 
