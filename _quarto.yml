@@ -62,20 +62,20 @@ website:
         href: docs/about/index.qmd
       # - text: "Guides"
       #   href: docs/guides/index.qmd
-      # - text: "Software"
-      #   href: docs/software/index.qmd
+      - text: "Software Guides"
+        href: docs/software/index.qmd
       # - text: "Methods"
       #   href: docs/methods/index.qmd
-      - text: "Data Collection Methods"
-        href: docs/data_collection_methods/index.qmd
-      - text: "Data Management"
-        href: docs/data_management/index.qmd
+      - text: "Research Design"
+        href: docs/research_design/index.qmd
       - text: "Ethics & Data Security"
         href: docs/ethics_&_data_security/index.qmd
       - text: "Measurement & Survey Design"
         href: docs/measurement_&_survey_design/index.qmd
-      - text: "Research Design"
-        href: docs/research_design/index.qmd
+      - text: "Data Collection Methods"
+        href: docs/data_collection_methods/index.qmd
+      - text: "Data Management"
+        href: docs/data_management/index.qmd
       - text: "Publication & Policy"
         href: docs/publication_&_policy/index.qmd
       
