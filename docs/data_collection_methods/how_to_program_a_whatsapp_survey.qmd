@@ -1,0 +1,153 @@
+---
+title: How To Program A WhatsApp Survey
+
+# Editors are the "Maintainers" of the page
+editors:
+  - "[Wesley Kirui](https://poverty-action.org/people/wesley-kirui)"
+
+# Authors are the "Contributors" of the page
+# Add your name to the list if you have contributed to this page
+author:
+  - "[David Torres](https://poverty-action.org/people/david-francisco-torres-leon)"
+---
+
+**Summary** This resource will help you gain proficiency in utilizing Twilio's
+features. Delve into Twilio's menus and options to navigate its functionalities effortlessly. Learn about WhatsApp templates and how to create them effectively. Gain insights into utilizing and creating basic widgets within a flow and master leveraging functions for seamless integration. By the end, you'll be well-equipped to publish and effectively manage information collected through WhatsApp Surveys.
+
+
+## WhatsApp Templates
+WhatsApp templates in Twilio are pre-approved message formats that you can use to send notifications , surveys or alerts to users via WhatsApp. Templates ensure compliance with WhatsApp's policies and guidelines by providing a structured format for message content.
+
+You can create and manage templates through the Twilio Console or the Twilio API
+
+![](../../assets/images/data_collection_methods/whatsapp/twilio_whatsapp_templates.gif "WhatsApp template")
+
+For your first survey you will need to create a new message template. In the Console, click on the "Messaging" dropdown in the top-left corner and select "Senders." Then Select "WhatsApp templates", then pick the "new message template".
+WhatsApp templates in Twilio are composed of message variables and fixed content, allowing personalizing messages with dynamic information like usernames or any preloaded field. When creating a template, it is necessary to specify a template name and language. The recommended option is selecting the "Marketing" option during the template creation process. To ensure compliance and prevent misuse, WhatsApp reviews and approves templates before they can be utilized. During the template creation process, it may be necessary to furnish a template description and example usage, aiding WhatsApp reviewers in comprehending the template's purpose and context.
+
+![](../../assets/images/data_collection_methods/whatsapp/twilio_create_whatsapp_template.gif "Create whatsapp template")
+
+As response options you can create buttons. These can have specific answers, phone numbers or links.
+
+![](../../assets/images/data_collection_methods/whatsapp/twilio_template_message.gif "Create template message")
+
+![](../../assets/images/data_collection_methods/whatsapp/template_message_example.png "WhatsApp template message example"){ style="float: right; margin-right: 30px; width: 200px;height: 200px;" }
+Approved templates can be used to send WhatsApp messages to users by replacing the variables with actual values using the Twilio API. <br>
+Here is how an approved template message would look like
+
+## Widgets
+The first step we need is to create a new Twilio flow. Flows will be where surveys are built. To create a new flow in Twilio, follow these steps. First, navigate to the "Studio" section in the main navigation menu. Click on the "Create a Flow" button or the "+" icon to begin creating a new flow. Provide a name and optional description for your flow. You will be taken to the Flow Builder where you can visually design your flow. 
+![](../../assets/images/data_collection_methods/whatsapp/twilio_flow_builder.gif "Flow builder")
+
+
+Once the flow is created,  you can drag and drop widgets from the sidebar onto the canvas to build your flow, connecting them with connectors to define the conversation or logic flow. Customize each widget's settings according to your requirements. In Twilio messaging, widgets are interactive elements or components that can be used to enhance the user experience and gather information from users. They provide a way to incorporate dynamic and engaging elements within the messaging flow. Widgets are typically used to collect user input, display options, or present interactive content.
+
+
+The widget library is at the right side of the Flow Builder. Here you can see the four main categories:
+Flow control: these widgets are elements in Twilio that allow you to implement conditional logic and control the flow of a conversation or process, enabling dynamic decision-making based on specific conditions or user inputs. 
+Voice: these widgets facilitate the implementation of voice-based interactions, enabling functionalities such as making and receiving phone calls, playing audio prompts, gathering user input via speech recognition, and routing calls to different destinations based on conditions or logic. 
+Messaging: these widgets enable the implementation of interactive messaging experiences, allowing functionalities like sending and receiving SMS, WhatsApp, and MMS messages, collecting user input, displaying options, and handling conversations in a dynamic and engaging manner. 
+Tools and execute code: these widgets provide developers with tools to perform actions like making API requests, executing JavaScript code, accessing external resources, and integrating custom logic into their Twilio applications, allowing for enhanced customization and flexibility in the application's behavior. 
+Connect other products: these widgets facilitate seamless integration with external services and products, enabling developers to incorporate functionalities from other platforms, such as CRM systems, databases, or third-party APIs, into their Twilio applications, expanding the capabilities and possibilities of their communication workflows. 
+![](../../assets/images/data_collection_methods/whatsapp/twilio_flow_builder_library.gif "Flow builder library")
+
+## Trigger Widget
+In Twilio Studio, the "Trigger" widget is a crucial component with a specific functionality. The Trigger widget initiates the execution of a Twilio Studio flow. Here's how it works:
+
+Entry Point: The Trigger widget serves as the entry point of your Studio flow. When an event or condition occurs that should start the flow, the Trigger widget is activated.
+Event-Based Start: The Trigger widget is often configured to start the flow based on a specific event, such as an incoming call, message, or any other trigger you define.
+Connectivity to External Systems: The Trigger widget can also be connected to external systems or services using Twilio Functions or other Twilio products. For example, you might use a Trigger to initiate a flow when receiving a webhook.
+Custom Triggers: Additionally, you can use custom triggers to initiate a flow. This involves setting up conditions within your application or system that, when met, send a request to Twilio to trigger the associated Studio flow.
+Handling Incoming Communication: Everyday use cases involve using the Trigger widget to handle incoming communication, such as an incoming call or message, and then guiding the flow through subsequent widgets to provide responses or perform specific actions.
+![](../../assets/images/data_collection_methods/whatsapp/twilio_trigger_widget.png "Trigger widget")
+
+## Messaging Widgets
+There are only two widgets in this section which are the "send message" and "send and wait for reply" widgets. These will be the ones used for the content displayed in the survey.
+
+1. **Send Message widget:** is a feature that allows you to send outbound messages to recipients using various channels, including SMS, WhatsApp, or other messaging services, by specifying the content, enabling efficient and personalized communication with users. The Send Message widget in Twilio establishes a unidirectional connection, where the system sends a message to a recipient without waiting for or expecting a response. It is primarily used for one-way notifications, alerts, or information dissemination.
+
+![](../../assets/images/data_collection_methods/whatsapp/twilio_sending_widget.png "Send message widget")
+
+2. 	Send and Wait for Reply: is a powerful feature that enables you to send a message to a recipient and pause the flow, waiting for their response. It allows you to specify the message content, and then waits for the recipient to reply before proceeding with the flow, facilitating interactive and dynamic conversations that involve back-and-forth communication with users. the Send and Wait for Reply widget establishes a bidirectional connection. It sends a message to a recipient and then pauses the flow, actively waiting for the recipient's reply. This widget facilitates interactive conversations and allows for dynamic back-and-forth communication between the system and the user.
+
+![](../../assets/images/data_collection_methods/whatsapp/twilio_send_reply_widget.png "Send and reply widget")
+
+In summary, the key distinction lies in the type of connection established by these widgets. The Send Message widget operates with a unidirectional connection for one-way messaging, while the Send and Wait for Reply widget establishes a bidirectional connection to enable interactive conversations by awaiting and processing user responses.
+
+## Flow Control Widgets
+
+There are three widgets in this section which are the "split based on", "set variable", and "run subflow" widgets. These will be the ones that will allow you to implement conditional logic and control the flow of a conversation or process, enabling dynamic decision-making based on specific conditions or user inputs.
+
+  1. **Split based on:** Is a powerful tool that enables you to dynamically split the flow of your application based on specific conditions or logic. It allows you to define multiple paths or branches within your flow, each with its own set of conditions and actions. When a message or event reaches the Split Based On widget, you can configure it to evaluate certain criteria, such as user input, variables, or data from previous steps in the flow. Based on the evaluation, the widget routes the flow to the appropriate branch that matches the condition. This widget is useful for implementing decision-making logic within your application. It enables you to create different paths or outcomes based on specific conditions, providing a way to customize the user experience, handle different scenarios, and route conversations accordingly. In this example we are evaluating if the participant replayed with a Yes or a No.
+  ![](../../assets/images/data_collection_methods/whatsapp/twilio_split_on_flow_widget.png "Split based on")
+    
+  2. **Set variable:** Is a versatile tool that enables the creation and assignment of variables within an application's flow. By defining variable names and assigning values to them, developers can store and manipulate data throughout the conversation or process. These values can be constants, dynamic inputs from users or system data, or the result of calculations. The variables can then be referenced and utilized in subsequent steps of the flow, allowing for personalized and dynamic interactions. The Set Variable widget empowers developers to manage and track information, perform calculations, and make conditional decisions based on the stored values, enhancing the flexibility and customization of Twilio applications. In this case we are 	creating a dummy variable that will take a value of 1 when the user replies with a Yes.
+  ![](../../assets/images/data_collection_methods/whatsapp/twilio_set_variable_flow_widget.png "Set variable")
+
+   
+  3. **Run subflow:** Enables the execution of separate and reusable subflows within the main flow of an application. By invoking a specific subflow and providing necessary input parameters, developers can modularize complex logic or functionality. This promotes code reusability, simplifies maintenance, and enhances flow organization. Upon executing the subflow, the control returns to the main flow, allowing for seamless integration and continuation of the application's logic. The Run Subflow widget empowers developers to create more efficient and manageable Twilio applications by encapsulating and invoking reusable subflows as needed. In this case we are telling Twilio to send an user to a different flow (or Survey) based on their answer.
+
+  ![](../../assets/images/data_collection_methods/whatsapp/twilio_run_subflow_widget.png "Run flow")
+
+In summary, the Split Based On widget enables branching based on conditions, the Set Variable widget transitions linearly with variable assignments, and the Run Subflow widget transitions back to the main flow after executing the separate subflow. You can see how they look in the following image.
+
+
+## Function Widget
+
+**Run function widget:** is a feature that provides a powerful capability to execute custom code or serverless functions within your Twilio application. By utilizing this widget, you can perform specific actions, implement custom logic, and seamlessly integrate external functionality into your Twilio Studio flow. Whether you need to make API calls, perform calculations, access external resources, or implement complex business logic, the "Run Function" widget enhances the capabilities of your Twilio application, allowing you to extend its functionality and customize its behavior according to your unique requirements. In this example, we use a function that waits a few seconds between questions or messages. This is very useful when you want to make the survey feel more natural and have a more human-like interaction with the user.
+![](../../assets/images/data_collection_methods/whatsapp/twilio_run_function_widget.png "Run function")
+
+## Functions
+
+#### Tools and execute code widgets
+
+There are three widgets in this section which are the "run function", "make HTTP request" and "add TwiML redirect" widgets. In this section we will talk only about the  "run functions" widgets.
+To leverage functions in Twilio, you have the flexibility to write them in JavaScript or any supported language of your choice. These functions can be triggered within a Twilio Studio flow using either the "HTTP Request" or "Run Function" widgets. By incorporating the "Run Function" widget, you gain the ability to execute personalized code or serverless functions, enabling you to perform specific actions and implement customized logic tailored to your Twilio application. This integration of functions seamlessly merges external functionality, augmenting the capabilities of your Twilio Studio flow and empowering you to create dynamic and powerful communication experiences. 
+
+Let's learn how to create the Wait function in Twilio
+
+## Wait function
+The Wait function creates a pause in the flow execution, allowing for a more natural experience for the respondent. By introducing pauses between questions or messages, the Wait function gives respondents sufficient time to read and comprehend lengthy text in the survey. This helps to ensure a smooth and user-friendly survey interaction, allowing respondents to fully engage with the content and provide thoughtful responses. Let's create this function in Twilio.
+
+1. **Navigate to Functions and Assets:** Go to the Twilio Console and locate the "Functions and Assets" section.
+2. **Access the Services Tab:** Within "Functions and Assets," click on the "Services" tab to manage your services.
+![](../../assets/images/data_collection_methods/whatsapp/twilio_services_tab.gif "Service tab")
+
+3. Create a New Service: Click on the option to create a new service. Name this new service "functions."
+![](../../assets/images/data_collection_methods/whatsapp/twilio_create_new_service.png "Create service")
+
+4. Create a New Function: Inside the "functions" service, select the option to create a new function.
+5. Name the Function: When prompted to name the function, enter "wait."
+![](../../assets/images/data_collection_methods/whatsapp/twilio_service_function_name.png "Service function name")
+
+6. Paste the Code: Within the "wait" function, paste the following lines of code.
+
+    ```
+    exports.handler = function(context, event, callback) {
+    setTimeout(function() {
+    return callback(null, null)
+        }, 1000)
+    }
+
+    ```
+
+7. Save the Function: Save the function after pasting the code to ensure your changes are preserved.
+8. Dependencies: Click on the dependency configuration and select the “Node.js v16” option.
+9. Deploy the Service: Once the function is saved, deploy the entire service to make the changes effective.
+![](../../assets/images/data_collection_methods/whatsapp/twilio_deploy_service_functions.png "Deploy service function")
+
+By following these steps, you'll successfully create a Wait function inside the Twilio platform.
+
+
+## Encrypt function
+The encryptor function is designed to encrypt variables, ensuring that sensitive information, such as personal identifiable information (PII), remains secure when data is stored or published. By encrypting the variables, the values are transformed into a secure format, protecting them from unauthorized access or exposure. This functionality is crucial for safeguarding sensitive information and maintaining the privacy and confidentiality of user data within the server. The Encrypt function provides a robust layer of security to prevent the public disclosure of sensitive data.
+
+## GSheet Publish function
+
+The GSheet Publish function in Twilio facilitates the transmission of participant responses to a Google Sheet, enabling you to effectively track and manage the collected data. By utilizing this function, the responses provided by participants are seamlessly sent to a designated Google Sheet, ensuring easy access to the data for analysis and tracking purposes. This functionality greatly streamlines the process of gathering and organizing responses, allowing you to efficiently monitor and manage the collected information within a familiar spreadsheet format. 
+
+
+## Additional Resources
+
+1. [How to use the Studio section](https://www.twilio.com/docs/studio)
+
