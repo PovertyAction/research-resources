@@ -11,8 +11,7 @@ author:
   - "[David Torres](https://poverty-action.org/people/david-francisco-torres-leon)"
 ---
 
-<p><span style="color: rgb(21,82,64)"><strong>Summary.&nbsp; </strong></span>This resource will help you learn how to prepare for launching a WhatsApp Survey on your computer. Learn the essential steps to configure your computer for a smooth survey launch fully. Additionally, learn about the usage of the launching Python code.
-</p>
+**Summary.** This resource will help you learn how to prepare for launching a WhatsApp Survey on your computer. Learn the essential steps to configure your computer for a smooth survey launch fully. Additionally, learn about the usage of the launching Python code.
 
 ## Computer Set-up
 Get started with the IPA GitHub user guide to streamline your computer setup. Follow these steps to download and install the essential programs required for seamless functionality. This guide is your gateway to hassle-free preparation, ensuring your computer is equipped with the necessary tools for a smooth survey launch and data management process. Let's dive into the user guide to initiate your computer setup successfully.
@@ -21,14 +20,6 @@ Get started with the IPA GitHub user guide to streamline your computer setup. Fo
 [IPA GitHub user guide](https://github.com/PovertyAction/requests_to_twilio)
 :::
 
-<style>
-.custom-font {
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  font-weight: bold;
-}
-</style>
 
 [Once you have successfully completed the installation, please move to **Cases** section]{.underline}
 

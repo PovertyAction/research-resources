@@ -12,7 +12,7 @@ author:
 ---
 
 
-<p><span style="color: rgb(21,82,64)"><strong>Summary.&nbsp; </strong></span>This resource will help you through the process of assuring security measures for your data collected in Twilio. Learn how to create the encryption widget and configure it within Twilio. Understand the Python encryption code and learn how to use it before publishing it to Google Sheets. Also, learn how to decrypt data using the Python decryption code. By the end, you'll be equipped with the knowledge and skills to implement robust encryption measures, ensuring the confidentiality and integrity of your data.
+**Summary.** This resource will help you through the process of assuring security measures for your data collected in Twilio. Learn how to create the encryption widget and configure it within Twilio. Understand the Python encryption code and learn how to use it before publishing it to Google Sheets. Also, learn how to decrypt data using the Python decryption code. By the end, you'll be equipped with the knowledge and skills to implement robust encryption measures, ensuring the confidentiality and integrity of your data.
 </p>
 
 ## Encryption Code

@@ -11,7 +11,7 @@ author:
   - "[David Torres](https://poverty-action.org/people/david-francisco-torres-leon)"
 ---
 
-**Summary: **This resource is designed to guide you through essential steps. Here, you'll find a complete walkthrough on creating Twilio's console, enabling you to navigate it easily. Additionally, we'll provide clear instructions on configuring your WhatsApp profile for message delivery through Twilio. Moreover, you will learn about the process for requesting approval from Meta, ensuring your profile is ready for WhatsApp surveying. Become familiar with how to optimize your experience with Twilio's powerful capabilities.
+**Summary.** This resource is designed to guide you through essential steps. Here, you'll find a complete walkthrough on creating Twilio's console, enabling you to navigate it easily. Additionally, we'll provide clear instructions on configuring your WhatsApp profile for message delivery through Twilio. Moreover, you will learn about the process for requesting approval from Meta, ensuring your profile is ready for WhatsApp surveying. Become familiar with how to optimize your experience with Twilio's powerful capabilities.
 
 ## Main Concepts
 - **Twilio Console:** is the centralized interface where users manage and control various Twilio services. It is the primary dashboard for configuring, monitoring and optimizing communication functionalities.

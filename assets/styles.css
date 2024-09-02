@@ -337,3 +337,9 @@ iframe.reveal-demo {
 .illustration {
   border: 1px solid #dee2e6;
 }
+.custom-font {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}

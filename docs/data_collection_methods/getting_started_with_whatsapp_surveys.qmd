@@ -11,7 +11,7 @@ author:
   - "[David Torres](https://poverty-action.org/people/david-francisco-torres-leon)"
 ---
 
-**Summary** This page introduces **WhatsApp surveys** as an alternative data collection method available for IPA projects. While there are multiple ways to approach WhatsApp surveys, the GRDS team recommends <em>Twilio</em> as the platform to implement data collection via WhatsApp. Accordingly, the page provides a quick introduction to Twilio and how to perform initial tasks such as setting up a Twilio console, procuring a phone number, and completing a verification process.
+**Summary.** This page introduces **WhatsApp surveys** as an alternative data collection method available for IPA projects. While there are multiple ways to approach WhatsApp surveys, the GRDS team recommends <em>Twilio</em> as the platform to implement data collection via WhatsApp. Accordingly, the page provides a quick introduction to Twilio and how to perform initial tasks such as setting up a Twilio console, procuring a phone number, and completing a verification process.
 
 ## Introduction
 
