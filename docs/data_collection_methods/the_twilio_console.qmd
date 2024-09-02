@@ -1,0 +1,74 @@
+---
+title: The Twilio Console
+
+# Editors are the "Maintainers" of the page
+editors:
+  - "[Wesley Kirui](https://poverty-action.org/people/wesley-kirui)"
+
+# Authors are the "Contributors" of the page
+# Add your name to the list if you have contributed to this page
+author:
+  - "[David Torres](https://poverty-action.org/people/david-francisco-torres-leon)"
+---
+
+**Summary.** This resource is designed to guide you through essential steps. Here, you'll find a complete walkthrough on creating Twilio's console, enabling you to navigate it easily. Additionally, we'll provide clear instructions on configuring your WhatsApp profile for message delivery through Twilio. Moreover, you will learn about the process for requesting approval from Meta, ensuring your profile is ready for WhatsApp surveying. Become familiar with how to optimize your experience with Twilio's powerful capabilities.
+
+## Main Concepts
+- **Twilio Console:** is the centralized interface where users manage and control various Twilio services. It is the primary dashboard for configuring, monitoring and optimizing communication functionalities.
+- **WhatsApp Functionality:** refers to the enhanced communication capabilities unlocked by upgrading a Twilio account. This includes leveraging WhatsApp for surveys and other interactive communication.
+- **WhatsApp Sender Management:** Within the Twilio Console, users manage WhatsApp senders through the "Messaging" section. This functionality provides oversight and control over sender-related activities.
+- **API Access Request:** Users can create new senders within the Twilio Console, request access to the WhatsApp API, and submit necessary information for approval. This process enables integration with WhatsApp services.
+
+## Twilio's Console
+1. Go to the [Twilio website](www.twilio.com) and sign up for a new account. Provide the required information and complete the registration process.
+2. After signing up, log in to your Twilio account.
+![](../../assets/images/data_collection_methods/whatsapp/twilio_login.gif "Twilio login")
+
+3. Verify your email and log in.
+4. Once you're logged in, navigate to the Twilio Console, which is the main dashboard for managing your Twilio services.
+![](../../assets/images/data_collection_methods/whatsapp/twilio_console.png "Twilio console")
+
+5. In the Console, click on the "Phone Numbers" dropdown in the top-left corner and select "Manage." Then Select "Buy a number", then pick a phone number in the location where you need it.
+![](../../assets/images/data_collection_methods/whatsapp/twilio_phone_number.gif "Twilio WhatsApp phone number")
+
+6. Upgrade the account to be able to use the WhatsApp functionalities.
+![](../../assets/images/data_collection_methods/whatsapp/twilio_upgrade.gif "Twilio upgrade")
+
+## Prices
+Navigating through Twilio's pricing structure is essential for businesses seeking reliable and scalable communication solutions. As a leading cloud communications platform, Twilio offers diverse services, each with its own pricing considerations. The standard pricing is described as follows:
+- [Cost tables by country](https://www.twilio.com/en-us/whatsapp/pricing)
+  - The cost to start a conversation (for 24 hours) is USD 0.010
+  - The cost for a user to initiate the conversation (for 24 hours) is USD 0.006
+  - Fixed price per WhatsApp number USD 1.00
+  - Cost per message of USD 0.005
+- [API usage pricing](https://www.twilio.com/en-us/messaging/pricing/conversations-api)
+
+Understanding these pricing options is essential to include in the project budget. It is important to acknowledge that some capabilities, such as WhatsApp, require buying a phone number, and the configurations are set to have automatic top-ups. We recommend the standard configuration on this page so that Twilio can run smoothly. 
+
+
+## Approvals
+
+7. In the Console, click on the "Messaging" dropdown in the top-left corner and select the "Senders" tab on the left-hand side to view the available WhatsApp senders.
+8. To send WhatsApp messages, you need to create a new sender and request access to the WhatsApp API. Click on the "Create New Sender" button and fill out the following fields. Select the phone number bought in previous steps and complete the profile information.
+9. Once you're familiar with the requirements and guidelines, click on the "Submit request" button to start the request process.
+![](../../assets/images/data_collection_methods/whatsapp/twilio_approval_request.gif "Twilio upgrade approval request")
+
+
+10. There is an optional step to complete the Meta verification, which grants the account the green tick in WhatsApp. This is highly recommended if you intend to send WhatsApp messages to a skeptical population and aim to enhance response rates in your surveys. To proceed, click on the "Open Meta Business Verification" button and follow the provided steps.
+![](../../assets/images/data_collection_methods/whatsapp/twilio_meta_verification.png "Twilio Meta verification")
+
+_After submitting the required formats for approval, please note that it may take approximately one week for everything to be set up. Once your sender is approved, you can proceed to create the WhatsApp profile in the next section._
+
+
+## WhatsApp Profile
+
+11. Navigate to the newly created sender and provide the necessary information that will be displayed in the profile. This includes adding an image, name, and a description according to your preferences.
+![](../../assets/images/data_collection_methods/whatsapp/twilio_whatsapp_profile.gif "Twilio WhatsApp profile")
+
+
+Once you complete this step, you are ready to start with your first WhatsApp survey.
+
+## Additional Resources
+1. [Twilio page for creating a console guide](https://www.twilio.com/try-twilio)
+2. [How to Search for and Buy a Twilio Phone Number from Console](https://support.twilio.com/hc/en-us/articles/223135247-How-to-Search-for-and-Buy-a-Twilio-Phone-Number-from-Console)
+3. [Create a WhatsApp profile in Twilio](https://www.twilio.com/es-mx/docs/whatsapp/tutorial/connect-number-business-profile#step-2-submit-a-sender-profile-and-message-templates)

@@ -1,0 +1,12 @@
+# Data Collection Methods
+
+## 1. WhatsApp Surveys
+
+This section includes the following training materials:
+
+  1. [Getting Started With WhatsApp Surveys](getting_started_with_whatsapp_surveys.html)
+  2. [The Twilio Console](the_twilio_console.html)
+  3. [How to Program A WhatsApp Survey](how_to_program_a_whatsapp_survey.html)
+  4. [Launching A WhatsApp Survey](launching_a_whatsapp_survey.html)
+  5. [Encryption & Data Security In WhatsApp Surveys](encryption_and_data_security_in_whatsapp_surveys.html)
+

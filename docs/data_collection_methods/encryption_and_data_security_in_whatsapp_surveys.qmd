@@ -1,0 +1,65 @@
+---
+title: Launching A WhatsApp Survey
+execute: 
+  enabled: false
+
+# Editors are the "Maintainers" of the page
+editors:
+  - "[Wesley Kirui](https://poverty-action.org/people/wesley-kirui)"
+
+# Authors are the "Contributors" of the page
+# Add your name to the list if you have contributed to this page
+author:
+  - "[David Torres](https://poverty-action.org/people/david-francisco-torres-leon)"
+---
+
+
+**Summary.** This resource will help you through the process of assuring security measures for your data collected in Twilio. Learn how to create the encryption widget and configure it within Twilio. Understand the Python encryption code and learn how to use it before publishing it to Google Sheets. Also, learn how to decrypt data using the Python decryption code. By the end, you'll be equipped with the knowledge and skills to implement robust encryption measures, ensuring the confidentiality and integrity of your data.
+
+## Encryption Code
+
+Ensuring the security of sensitive data is crucial, especially when dealing with Personally Identifiable Information (PII). If your survey or workflow involves PII, follow these steps to implement encryption before publishing into Google Sheets:
+
+1. **Set Up Encryption in Twilio:**
+    - Navigate to "Functions/Services/Create Service" within your Twilio console.
+    - Click on "Add Function" and paste the following code: 
+        - **[Encrypt Function](https://github.com/PovertyAction/requests_to_twilio/blob/master/twilio_encrypt_fields.js)**
+    - Modify the `secret_key` and store it securely on your computer.
+    -  Adjust the amount and names of the variables you intend to encrypt.
+
+2. **Create an Encryption Widget in Twilio Studio Flow:**
+    - Just before the function widget that publishes to Google Sheets, create a function widget for encryption.
+    - Select the service you created and set the environment as "UI."
+    - Choose the name of the function you created and input the variables to be encrypted as function parameters.
+    - Utilize the keys you want as variable names in the function code, using `{{widgets.widget_name.inbound.Body}}` as the values.
+3. **Update Google Sheets Publishing Function:**
+    - In the function responsible for publishing to Google Sheets, replace `{{widgets.variable_name.inbound.Body}}` with `{{widgets.name_of_your_encryption_widget.parsed.name_of_the_variable}}`
+
+
+**[By implementing these steps, you will protect all the PII within your survey or workflow, ensuring that sensitive information remains confidential throughout the data collection.]{.underline}**
+
+## Decryption Code
+
+Once your encrypted data is sent to Google Sheets, you'll receive strings that may seem unintelligible Follow these steps for decryption:
+
+1. **Download and Save Encrypted File:**
+
+    - Download the encrypted file provided.
+    - Save it as a .csv file into a Boxcryptor/Cryptomator location for added security. It needs to be an `"X:/"` route.
+
+2. **Run Decryption Code:**
+
+    - Execute the following Python code in the command prompt:
+
+    ```bash
+
+    python .\csv_decryptor.py \\\
+        --encrypted_csv_path X:\path\to\your\csv\demo.csv \\\
+        --list_of_columns_to_decrypt col1,col2  \\\
+        --secret_key your_secret_key1
+
+    ```
+
+    - Ensure you replace placeholders `(X:\path\to\your\csv\demo.csv, col1,col2, your_secret_key1)` with your specific details.
+
+    **[This process will generate a decrypted file version in the same path as the encrypted one. Following these clear steps ensures a smooth and secure decryption of your data.]{.underline}**

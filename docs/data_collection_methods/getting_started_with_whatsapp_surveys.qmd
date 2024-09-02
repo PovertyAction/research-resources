@@ -1,0 +1,84 @@
+---
+title: Getting Started With WhatsApp Surveys
+
+# Editors are the "Maintainers" of the page
+editors:
+  - "[Wesley Kirui](https://poverty-action.org/people/wesley-kirui)"
+
+# Authors are the "Contributors" of the page
+# Add your name to the list if you have contributed to this page
+author:
+  - "[David Torres](https://poverty-action.org/people/david-francisco-torres-leon)"
+---
+
+**Summary.** This page introduces **WhatsApp surveys** as an alternative data collection method available for IPA projects. While there are multiple ways to approach WhatsApp surveys, the GRDS team recommends <em>Twilio</em> as the platform to implement data collection via WhatsApp. Accordingly, the page provides a quick introduction to Twilio and how to perform initial tasks such as setting up a Twilio console, procuring a phone number, and completing a verification process.
+
+## Introduction
+
+[A short Introduction]
+
+## Why consider WhatsApp Surveys?
+At Innovations for Poverty Action, we've strategically chosen WhatsApp as one of the methods for collecting data, driven by its unique strengths that greatly enhance the efficiency and impact of our initiatives. Here are some of the main reasons why we have selected WhatsApp:
+
+### Pros
+- WhatsApp's **massive user base of 2 billion individuals** globally ensures that our outreach is extensive and inclusive, covering a diverse range of demographics and geographical regions. This widespread presence enables us to gather insights from different demographic groups.
+- WhatsApp has **high engagement levels and widespread familiarity**. With people across the globe already using WhatsApp for everyday communication, our surveys seamlessly integrate into their digital routines. This familiarity encourages participation and enables respondents to quickly and conveniently share their perspectives using smartphones, fostering a more accessible and inclusive data collection process. 
+- WhatsApp is a **cost-effective solution** that significantly reduces traditional paper, printing, and fieldwork expenses. 
+- WhatsApp's capability to handle **various types of media, including text, images, audio, and video**, enriches our surveys with diverse content, ensuring a comprehensive understanding of respondents' perspectives.
+
+### Cons
+- **User Trust:** Users consider WhatsApp a private and secure messaging platform. If they feel that their data is being collected in ways that violate their privacy or trust, it may lead to a negative perception of the organization or business. Therefore, sensitive information should not be asked via WhatsApp.
+- **Opt-In and Consent Challenges:** While obtaining opt-in and consent is crucial for ethical data collection on WhatsApp, researchers need to be mindful of the challenges associated with user trust. Due to existing mistrust with WhatsApp, participants may approach data collection interactions skeptically. Researchers must ensure that participants have a clear option to opt out, and it is essential to obtain explicit upfront consent for these interactions. 
+- **Simplicity of Surveys:** Since this is a remote data collection method, questionnaires must be simple. If presented with a complicated survey, participants may have doubts or concerns that no enumerator can help resolve. Therefore, it is advisable to use simple instruments for data collection to minimize attrition and ensure effective participation.
+
+## What is Twilio?
+[Twilio](https://www.twilio.com/en-us) is an interactive platform with customers. This platform allows communication through calls, text, email, video, and WhatsApp. Due to its flexibility, it has been used in IPA Colombia as a tool to send WhatsApp messages and implement WhatsApp surveys. Given the number of available tools, it is flexible to adapt to the different needs of a project. 
+
+Twilio offers the following services:
+- WhatsApp surveys
+- WhatsApp chatbots
+- SMS surveys
+- Interactive Voice Response surveys (IVR)
+- Massive email campaigns
+- Customer support/assistance, virtual call center by WhatsApp, voice and video calls
+
+The relationship between [Twilio](https://www.twilio.com/en-us) and [WhatsApp](https://www.whatsapp.com/) is that Twilio offers an API (Application Programming Interface) integration that allows developers to use Twilio to send and receive messages on the WhatsApp platform. Businesses and developers can leverage Twilio to integrate WhatsApp messaging capabilities into their applications or systems, enabling communication with users via WhatsApp. Twilio is an intermediary that facilitates communication between the application and WhatsApp, making it easier for developers to incorporate WhatsApp messaging into their solutions. For the IPA case, Twilio facilitates the development of WhatsApp Surveys and data collection.
+
+
+## Where has it been tested?
+IPA Colombia has tested Twilio in the PEP, Think Equal, UEPA, Ingreso Solidario, Play To Learn, ETPV, Sisbén, and Lego projects. Twilio has had different uses in these projects. One of these usages is reminder messages for visits in data collections via WhatsApp. For example, PEP and Think Equal projects have used Twilio to collect information through WhatsApp surveys; ETPV and Sisbén projects have used this tool as the primary data collection method. In addition, different regional offices have motivated themselves to prove the platform due to its success in the Colombian office.
+GRDS can provide support in the planning and programming of surveys or interventions by SMS, WA, or IVR through Twilio
+
+## Twilio and Data Security
+- GRDS has developed a survey flow that guarantees data security—this flow works by sending the files to the Twilio API locally from the folders encrypted in BoxCryptor. Then, the information collected via Twilio is published in Google Sheets. 
+- When data has PII, GRDS designed a Twilio function that automatically encrypts the data over Google Sheets. This function gives an additional layer of protection to the data. 
+- No PII remains in the Twilio servers with this data flow. 
+- IPA IRB is familiar with the GRDS data flow and Twilio's protocols to guarantee the participants' information security during the studies.
+
+## What we will learn
+In the following sections (2-5), we'll delve into specific aspects of Twilio's functionalities and how you can harness its power for successful communication campaigns. Let's take a look at what each section holds:
+
+- **Section 2: Twilio Console and Setup**
+   - Explore Twilio Console for service management
+   - Step-by-step setup guide
+   - Understand Twilio's pricing structure
+   - Obtain WhatsApp approvals for enhanced communication capabilities
+
+- **Section 3: Programming and Survey Creation**
+  - Core programming concepts in Twilio
+  - Practical insights for creating engaging WhatsApp surveys
+
+- **Section 4: Launching and Monitoring WhatsApp Surveys**
+  - Steps to launch a WhatsApp survey
+  - Preparation and information gathering
+  - How to monitor and manage collected data
+
+- **Section 5: Encryption/Decryption of WhatsApp Survey Data**
+  - Focus on data security
+  - Implement encryption measures
+  - Safeguard sensitive information throughout the data lifecycle
+
+Let's begin this journey to understanding Twilio, from setup to encryption, and equip ourselves with the tools to implement a WhatsApp Survey.
+
+## Additional Resources
+1. [ The Stanford Immigration Policy Lab Manual](https://drive.google.com/file/d/1Emxcbo10MaNHD8uYjI8o2zMkD031ynti/view)
