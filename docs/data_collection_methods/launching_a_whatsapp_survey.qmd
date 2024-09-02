@@ -1,6 +1,8 @@
 ---
 title: Launching A WhatsApp Survey
-
+execute: 
+  enabled: false
+  
 # Editors are the "Maintainers" of the page
 editors:
   - "[Wesley Kirui](https://poverty-action.org/people/wesley-kirui)"
@@ -46,18 +48,19 @@ To launch your survey, you will use the following Python code. Follow these next
 1. **Access Command Prompt or Powershell:** Open the command prompt (cmd) or Powershell in your computer to start the process.
 2. **Run the Python Script:**
  
-    `cd requests_to_twilio`
 
-    ```
-    python twilio_launcher.py \
-        --account_sid your_account_sid \
-        --account_token your_account_token \ 
-        --twilio_number your_twilio_number  \
-        --flow_id flow_id  \
-        --input_file full_path_to_input_file \
-        --batch_size batch_size \
-        --sec_between_batches sec_between_batches \
-        --columns_with_info_to_send name,full_name,month,year,survey_intro,city,job,caseid 
+    ```bash
+    cd requests_to_twilio
+    python twilio_launcher.py \\\
+        --account_sid your_account_sid \\\
+        --account_token your_account_token \\\ 
+        --twilio_number your_twilio_number  \\\
+        --flow_id flow_id  \\\
+        --input_file full_path_to_input_file \\\
+        --batch_size batch_size \\\
+        --sec_between_batches sec_between_batches \\\
+        --columns_with_info_to_send name,full_name,month, \\\
+                        year,survey_intro,city,job,caseid 
     ```
 
     - Ensure you replace the placeholders; here is where you can find the information needed:
@@ -86,11 +89,11 @@ A final step before launching a WhatsApp survey is to configure the Google Sheet
 
     - Create two environment variables:
 
-        - `client_email:` survey-demo@survey-demo-306219.iam.gserviceaccount.com
+        - `client_email:` `user@project-name.iam.gserviceaccount.com`
         - `sheetId:` Retrieve this from the link of your Google Sheet. It is the alphanumeric group in the link after "/d/" and before the next "/."
 
 3. **Create a New Function:**
-    - Proceed to the "List" submenu and generate a new function from a blank interface named "function_gsheets.
+    - Proceed to the "List" submenu and generate a new function from a blank interface named "function_gsheets".
     - Copy the provided function code into the code section.
 
 ::: {.custom-font}
