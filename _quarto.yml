@@ -188,21 +188,47 @@ website:
               href: docs/methods/references.qmd
 
     - id: data_collection_methods
-      collapse-level: 2
+      collapse-level: 3
       contents:
         - section: "Data Collection Methods"
           href: docs/data_collection_methods/index.qmd
           contents:
-            - text: "Getting Started With WhatsApp Surveys"
-              href: docs/data_collection_methods/getting_started_with_whatsapp_surveys.qmd
-            - text: "The Twilio Console"
-              href: docs/data_collection_methods/the_twilio_console.qmd
-            - text: "How To Program A WhatsApp Survey"
-              href: docs/data_collection_methods/how_to_program_a_whatsapp_survey.qmd
-            - text: "Launching A WhatsApp Survey"
-              href: docs/data_collection_methods/launching_a_whatsapp_survey.qmd
-            - text: "Encryption And Data Security In WhatsApp Surveys"
-              href: docs/data_collection_methods/encryption_and_data_security_in_whatsapp_surveys.qmd
+            - section: "WhatsApp Surveys"
+              href: docs/data_collection_methods/whatsapp_surveys/index.qmd
+              contents:
+                - text: "Getting Started With WhatsApp Surveys"
+                  href: docs/data_collection_methods/whatsapp_surveys/getting_started_with_whatsapp_surveys.qmd
+                - text: "The Twilio Console"
+                  href: docs/data_collection_methods/whatsapp_surveys/the_twilio_console.qmd
+                - text: "How To Program A WhatsApp Survey"
+                  href: docs/data_collection_methods/whatsapp_surveys/how_to_program_a_whatsapp_survey.qmd
+                - text: "Launching A WhatsApp Survey"
+                  href: docs/data_collection_methods/whatsapp_surveys/launching_a_whatsapp_survey.qmd
+                - text: "Encryption And Data Security In WhatsApp Surveys"
+                  href: docs/data_collection_methods/whatsapp_surveys/encryption_and_data_security_in_whatsapp_surveys.qmd
+            
+            - section: "Qualitate Research"
+              href: docs/data_collection_methods/qualitative_research/index.qmd
+              contents:
+                - text: "Introduction"
+                  href: docs/data_collection_methods/qualitative_research/introduction.qmd
+                
+                - section: "Best Practices Guides"
+                  href: docs/data_collection_methods/qualitative_research/best_practices_guides/index.qmd
+                  contents:
+                    - text: "Focus Groups"
+                      href: docs/data_collection_methods/qualitative_research/best_practices_guides/focus_groups.qmd
+                    - text: "Interviews"
+                      href: docs/data_collection_methods/qualitative_research/best_practices_guides/interviews.qmd
+                    - text: "Observations"
+                      href: docs/data_collection_methods/qualitative_research/best_practices_guides/observations.qmd
+                    - text: "Rapid Ethnographies"
+                      href: docs/data_collection_methods/qualitative_research/best_practices_guides/rapid_ethnographies.qmd
+
+
+
+
+
 
     - id: data_management
       collapse-level: 2
