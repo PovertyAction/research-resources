@@ -1,1 +1,12 @@
-coming soon...
+---
+title: Data Management
+
+# Editors are the "Maintainers" of the page
+editors:
+  - "[Wesley Kirui](https://poverty-action.org/people/wesley-kirui)"
+
+# Authors are the "Contributors" of the page
+# Add your name to the list if you have contributed to this page
+author:
+  - "[David Torres](https://poverty-action.org/people/david-francisco-torres-leon)"
+---
