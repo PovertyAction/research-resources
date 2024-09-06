@@ -1,0 +1,16 @@
+---
+title: Data Aggregation
+execute: 
+  enabled: false
+
+# Editors are the "Maintainers" of the page
+editors:
+  - "[Wesley Kirui](https://poverty-action.org/people/wesley-kirui)"
+
+# Authors are the "Contributors" of the page
+# Add your name to the list if you have contributed to this page
+author:
+  - "[Michael Rosenbaum](https://github.com/mfrosenbaum)"
+  - "[Wildingka](https://github.com/wildingka)"
+  - "[Rosemarie Sandino](https://github.com/rsandino)"
+---
