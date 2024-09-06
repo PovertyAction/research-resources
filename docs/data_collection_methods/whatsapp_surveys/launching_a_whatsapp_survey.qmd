@@ -39,7 +39,7 @@ The first step to start the process is creating a "cases file." This file is a d
 
 Your cases file should look like this:
 
-![](../../assets/images/data_collection_methods/whatsapp/whatsapp_survey_cases.png "Cases")
+![](../../../assets/images/data_collection_methods/whatsapp/whatsapp_survey_cases.png "Cases")
 
 ## Launching Code
 
@@ -85,7 +85,7 @@ A final step before launching a WhatsApp survey is to configure the Google Sheet
     - Navigate to "Functions (Classic)" and select "Configure".
     - In the "Dependencies" section, ensure the specified fields are completed, as illustrated in the provided image.
 
-    ![](../../assets/images/data_collection_methods/whatsapp/twilio_functions_configuration.png "Configure functions")
+    ![](../../../assets/images/data_collection_methods/whatsapp/twilio_functions_configuration.png "Configure functions")
 
     - Create two environment variables:
 
