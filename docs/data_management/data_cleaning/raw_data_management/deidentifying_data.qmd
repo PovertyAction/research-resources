@@ -15,8 +15,6 @@ author:
   - "[Rosemarie Sandino](https://github.com/rsandino)"
 ---
 
-# De-identifying Data
-
 ## Personally Identifiable Information
 
 Personally Identifiable Information (PII) is any data point or combination of data points that allows someone to identify an individual or household with a reasonable degree of certainty. 

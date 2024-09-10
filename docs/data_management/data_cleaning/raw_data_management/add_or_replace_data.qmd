@@ -15,8 +15,6 @@ author:
   - "[Rosemarie Sandino](https://github.com/rsandino)"
 ---
 
-# Adding or Correcting Data
-
 Raw data may not contain the full or correct set of data. There are many reasons why this may be the case: survey responses may need to be corrected by enumerators, translations for responses need to be added, admin data may have entry errors, etc. It is relatively simple to make changes in data using statistical software, but it is important to make changes in a systematic way to ensure all modifications are reproducible. 
 
 There are at least two common situations in IPA projects where having a standardized data flow for modifying or adding data will increase data quality: replacements and translations. This article suggests best practices to add data collected outside of a survey form. 
@@ -115,16 +113,16 @@ Once these translations are completed, they would be merged on to the do file. T
 *Load in data and save a tempfile
 preserve
 
-  import excel using "${temp}/q_en_20200124_MR.xlsx", first clear
-  
-  *Do some cleaning to ensure excel files matches expected
-  missing dropvars, force // remove extravars
-  missing dropobs, force // remove empty observations
-  confirm variable id q q_en // check have variables
+import excel using "${temp}/q_en_20200124_MR.xlsx", first clear
 
-  *Save tempfile to merge
-  tempfile q_en
-  save `q_en'
+*Do some cleaning to ensure excel files matches expected
+missing dropvars, force // remove extravars
+missing dropobs, force // remove empty observations
+confirm variable id q q_en // check have variables
+
+*Save tempfile to merge
+tempfile q_en
+save `q_en'
   
 restore
 

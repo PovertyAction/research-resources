@@ -15,9 +15,6 @@ author:
   - "[Rosemarie Sandino](https://github.com/rsandino)"
 ---
 
-
-# Data Structure and Reshaping
-
 ## Wide and Long Data
 
 One way to describe data is if the dataset is stored in a "long" or "wide" format. Long data keeps repeated values as an observation (row):
@@ -54,12 +51,14 @@ To convert between wide and long data, Stata uses the `reshape` command. Reshapi
 The following code reshapes a wide dataset by person to a long dataset by person-month. The variable that we want to reshape is `income`.
 
 ```stata
-*sCount all of the income variables and create a variable for each observations
+/*sCount all of the income variables and create 
+a variable for each observations*/
 ds income*           
 local copies : word count `r(varlist)'  
 expand `copies' 
 
-*Then create a list of all of the vars with each stub and manually expand
+/*Then create a list of all of the vars with each stub
+ and manually expand*/
 gen yearmonth = . // create an empty var that will hold the sub-group identifier (this is the j var in reshape)
 foreach var in income {
     
@@ -67,7 +66,8 @@ foreach var in income {
     ds `var'_*,                  
     local reshapevarlist `r(varlist)'   
 
-    *remove the stub so that we can have the yearmonth or j identifier foreach var alone while maintaining their order        
+    /*remove the stub so that we can have the yearmonth 
+    or j identifier foreach var alone while maintaining their order*/        
     local monthyear = subinstr("`reshapevarlist'", "`var'_", "", .)   
      
     *create an empty version of the stub, this will become the long var
@@ -77,8 +77,10 @@ foreach var in income {
     forvalues x = 1/`copies' {           
         
         * Replace the variable from the list we defined earlier in the loop
-        /* See "h mod" to understand how mod works, but in short "if mod(n, `copies') == `x'"" 
-        will only replace the variable for the nth observation in each group defined by
+        /* See "h mod" to understand how mod works, 
+        but in short "if mod(n, `copies') == `x'"" 
+        will only replace the variable for the nth observation 
+        in each group defined by
         an ID variable (e.g. the nth or last row created in the expand)
         */
         local currvar : word `x' of `reshapevarlist'         

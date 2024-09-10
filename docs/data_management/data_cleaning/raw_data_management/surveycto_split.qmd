@@ -16,8 +16,6 @@ author:
 ---
 
 
-# SurveyCTO Split
-
 Some surveys questions have the option of “check all that apply”, meaning that they allow for multiple responses. If you uncheck the "export select_multiple responses as a series of 1/0 columns" in SurveyCTO desktop, SurveyCTO will export these variables as a string containing all possible answers in the form of a space-separated list (e.g., a variable may have the string “A C E” to indicate responses of A, C, and E). 
 
 For analysis purposes, it’s usually best to split these variables into binary variables, one for each possible choice (A, B, C, D, or E), as well as one for each combination of choices. The IPA-written `stringdum` function can help converting these variables to a more useful form, including separate dummies for each option, variables that count the number of times each option is selected, and several options for naming conventions. The `split` command can also convert these variables, by parsing the variable on spaces. This splits the variable into a new variable after each space (see `help split`). If this is not sufficient, Stata has a number of string functions (`help string functions`). You can also use the `regexm` function to accomplish this, which uses [regular expressions](https://www.stata.com/support/faqs/data-management/regular-expressions/). Below is an example script using both split and regexm to accomplish cleaning a select multiple question manually.
@@ -61,19 +59,22 @@ foreach var in `stringvars' {
     }
 }
 
-/* Exclude from the `select_mult' local variables which have been erroneously captured by the process above
-irregular responses to the "survey_note" variable are captured by this process */
+/* Exclude from the `select_mult' local variables which have been 
+erroneously captured by the process above irregular responses to 
+the "survey_note" variable are captured by this process */
 local exclude_notes "survey_notes"
 local select_mult: list select_mult - exclude_notes           
 
-*For several otherwise numeric variables, the option "Not asked in this version" remains; remove it
+/*For several otherwise numeric variables, 
+the option "Not asked in this version" remains; remove it*/
 foreach var in `select_mult' {
 
      *no observations; safe to use this as a numeric indicator for .v
     tab `var' if `var'=="-444" 
     replace `var'="-444" if `var'=="Not asked in this version"
 
-    *split and de-string vars in the selec_mult list, which now have only numeric characters
+    /* split and de-string vars in the selec_mult list, 
+    which now have only numeric characters */
     split `var', gen(`var'_) destring                  
 }
  

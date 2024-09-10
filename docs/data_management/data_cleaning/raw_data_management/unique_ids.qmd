@@ -15,11 +15,10 @@ author:
   - "[Rosemarie Sandino](https://github.com/rsandino)"
 ---
 
-# Unique IDs 
-
 Unique IDs are critical to a well-managed dataset, particularly when it comes time to merge across datasets or sort values in a consistent manner. You should use the `isid` command in Stata to check that the ID is indeed unique before you begin any sort of data management. Uniqueness is important not just to describe data, but because it affects how Stata manages data. Data will take a random order within a non-unique value if data are sorted on a shared identifier. This randomness is controlled by a separate random seed in Stata and can be made reproducible using `set sortseed` or `sort, stable`. Those approaches do not substitute for not having a unique ID; reproducibility is not a substitute for uniqueness.
 
 To illustrate this, you can run the following code in Stata:
+
 ```stata
 *Use system dataset
 set sortseed 1
