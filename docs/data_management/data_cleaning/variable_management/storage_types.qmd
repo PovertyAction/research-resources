@@ -15,12 +15,11 @@ author:
   - "[Rosemarie Sandino](https://github.com/rsandino)"
 ---
 
-## Storage Types and Date Formats
 Statistical software requires a storage type to determine how and what data to store about each variable or value. This storage type determines if the software treats a variable as text or a number, and how much information is stored in each variable. This information could be how many digits of precision are required or if the variable is just 0 or 1s. Some data types such as dates have specific metadata attached – January 1, 1960 was a Friday – that relate to storage type. 
 
 Variables are stored in two broad categories: string (text) or numeric. For tasks in analysis such as regression, Stata requires categorical variables to be stored as numeric variables, not string variables. This is also beneficial for storage size of variables. As a rule of thumb in Stata, ordinal and categorical variable should be stored as numeric variables with labeled values. Only text or IDs should ever be stored as a string variables. Labeling categorical variables is preferred and should be treated as a part of data management. 
 
-### Storage Types in Stata
+## Storage Types in Stata
 Storage formats such string or numeric are the variable’s type, different from its format. Variable formats affect how Stata displays values of variables to the user and are loosely related to the storage type – a string cannot be displayed with significant digits for example.
 
 Numeric variables are stored as byte, int, long, float or double. Float and double are the two that can hold non-integer numbers (decimals) and are the most common. More details on how numerical formats may affect datasets is available in [this](https://povertyaction.github.io/guides/cleaning/06%20Coding%20in%20Stata/02%20Numerical%20Formats/) guide article. Numerical and string formats can be changed using the `recast` command, or by specifying a storage format using the `generate` command. 
@@ -29,7 +28,7 @@ String variables storage types are identified by their character length (`str4` 
 
 A variable's format controls how the data is displayed. This is can be used to format numeric variables to display with commas or a specific number of decimal points. For details on the corresponding formats for each variable type and how to format variables, type `help format`. In short, it’s important to match the displayed format to the content, especially for outputs, so that content can be interpretable by humans.
 
-### Dates in Stata
+## Dates in Stata
 Dates are especially complex to work with in Stata. Stata stores dates as a numeric variable that captures either the number of days, months, quarters, or years since January 1, 1960. It is important to know that dates can also have a time component (datetimes), and are then stored as the number of milliseconds since January 1, 1960. These formats are numeric, but once they are stored as a date in Stata several special Stata functions can be applied to them to help with calculations that relate to dates and time. For more information see `h datetime translation`.
 
 Survey CTO defaults to storing date variables as strings when importing them to Stata. It’s advantageous to convert these variables to a proper date format, as it allows for various logical and mathematical calculations. For example, you could count the number of days between a survey start date and submission date, or the number of minutes between the survey was started and completed. The SurveyCTO datetime metadata (`starttime endtime submissiondate`) are already stored as date variables.`starttime` and `endtime` are formatted as datetimes (`%tc`) and `submissiondate` is formatted as a date (`%td`)).
@@ -45,7 +44,8 @@ loc date_vars `r(varlist)'
 
 *save tempvar so indifferent to var length
 tempvar temp 
-gen double `temp' = . // create double to store datetime to avoid rounding
+* create double to store datetime to avoid rounding
+gen double `temp' = .
 
 *Foreach date variable, convert to datetime and run checks
 foreach var of local date_vars {
@@ -75,7 +75,8 @@ foreach var of local date_vars {
 	loc varl : var label `var' // save var label
 	replace `temp' = . // clear tempvar
 	replace `temp' = clock(`var', "MDYhms")
-	drop `var' // drop the variable as cannot replace values and convert type
+	*drop the variable as cannot replace values and convert type
+	drop `var' 
 	gen double `var' = `temp'
 	format `var' %tcCCYY_NN_DD__HH:MM:SS // choose a preferred format
 

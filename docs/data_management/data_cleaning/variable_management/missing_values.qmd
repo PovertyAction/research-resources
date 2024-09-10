@@ -15,11 +15,9 @@ author:
   - "[Rosemarie Sandino](https://github.com/rsandino)"
 ---
 
-## Missing Values
-
 For a number of reasons, variables will have missing values for certain observations. It is helpful to have the data reflect why these values are missing, particularly for numeric variables. For instance, you may want to know whether someone didn’t answer a question about business revenues because the question was skipped (e.g., they weren’t business owners) or whether it was because they could not remember.
 
-### Missing values on import
+## Missing values on import
 
 Many statistical software will import variables and observations that only contain missing values when importing from other data formats. Often times, it's useful to clear those values immediately after importing data. This can be done manually, or through the `missing` command which can be installed through SSC. One approach is to do this is as follows:
 
@@ -52,7 +50,7 @@ For numeric variables, this can be done in one line using recode. For example, i
 recode * (-99=.)
 ```
 
-### Extended missing values in Stata
+## Extended missing values in Stata
 
 Stata has special codes for numeric missing values. For numeric variables, missing values are considered to be greater in value than all other numbers and themselves have an order of magnitude. The magnitude of missing values increases across the alphabet, with the standard missing value `.` coming before `.a`: `.` <  `.a` <  `.b` <  `.c` < ... < `.z` The `.a`, `.b`, etc. are called “extended missing values.” . Note that extended missing values cannot be stored in string variables. Instead, all string variables with a missing value are shown as `“”` (called “blank”). 
 
