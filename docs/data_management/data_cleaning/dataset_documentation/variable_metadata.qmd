@@ -15,10 +15,10 @@ author:
   - "[Rosemarie Sandino](https://github.com/rsandino)"
 ---
 
-## Variable Metadata in Stata
 Sometimes you will want to attach information or other labeling that is longer than Stata allows (labels are capped at 80 characters). If this is the case, you can store the full desired label into the variable notes or characteristics. Both notes and characteristics can describe variables or the dta file.
 
-### Notes
+## Notes
+
 One variable can have multiple notes. Notes can be added into variables by typing  `note VARIABLE : “Note”` (i.e. for variable `VARIABLE` the note `note` was added as. To display the notes stored in one variable just type “notes VARIABLE”. Notes are also stored in Stata as locals and can be called using `` `VARIABLE[note1]' ``. These notes are numbered based on the order in which they are received. Note's ordering can be modified and deleted by the `note` command (see `help notes` in Stata).
 
 Survey CTO includes the full text of the question from the survey instrument as variable notes (as well as the truncated questions as variable labels) as part of the import do file. These notes will always be in the downloaded language. They will not contain filled values for the respondent that are produced as the result of calculate fields.
@@ -32,7 +32,8 @@ foreach var of varlist VARIABLES {
 }
 ```
 
-### Char
+## Char
+
 Additional information can be added using characteristics, which function similarly to notes. The Stata manual describes characteristics as "an arcane feature of Stata [that] are great use to Stata programmers." Many commands use and define specific named characteristics to attach metadata. Characteristics (type `help char` in Stata) can describe variables and the dataset itself.  
 
 The main difference between characteristics and notes is that the `char` command requires a name for each characteristic. Whereas `note VARIABLE : "Note"` creates the next sequential note (1 if the first note, 2 if the second, etc.), `char` explicitly requires a character name, "charname" in the following code: `char define VARIABLE[charname] "Note"`. This can be useful for saving labels in multiple languages. These characteristics can then be called by name, instead of an arbitrarily assigned number.
@@ -49,14 +50,16 @@ ren label labelenglish
 ren label* * // rename to remove "label_" prefix from all variables
 
 *Remove variables not exported to Stata
-drop if inlist(type, "begin group", "end group", "image", "begin repeat", "end repeat")
+drop if inlist(type, "begin group",  ///
+  "end group", "image", "begin repeat", "end repeat")
 drop type
 
 *Only keep variables with non_missing
 ds name, not // get list of label variables
 loc languages `r(varlist)' relevance
 egen has_lab = rownonmiss(`languages'), strok
-keep if has_lab >= 1 & !mi(has_lab) // keep only rows with has_lab
+// keep only rows with has_lab
+keep if has_lab >= 1 & !mi(has_lab) 
 
 *Save variables and language names
 loc varnames // init empty

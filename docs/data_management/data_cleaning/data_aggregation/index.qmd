@@ -14,3 +14,11 @@ author:
   - "[Wildingka](https://github.com/wildingka)"
   - "[Rosemarie Sandino](https://github.com/rsandino)"
 ---
+
+## Data Aggregation
+
+This section covers:
+
+1. [Merging Two Datasets](merging_two_datasets.html)
+2. [Fuzzy Merge](fuzzy_merge.html)
+3. [Appending](appending.html)

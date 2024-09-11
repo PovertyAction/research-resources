@@ -14,3 +14,11 @@ author:
   - "[Wildingka](https://github.com/wildingka)"
   - "[Rosemarie Sandino](https://github.com/rsandino)"
 ---
+
+
+## Outcome Creation
+
+This section covers:
+
+1. [Sorting Data](sorting.html)
+2. [Collapsing Data](collapsing.html)
