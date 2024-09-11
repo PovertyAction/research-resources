@@ -14,3 +14,12 @@ author:
   - "[Wildingka](https://github.com/wildingka)"
   - "[Rosemarie Sandino](https://github.com/rsandino)"
 ---
+
+## Coding in Stata
+
+This section covers:
+
+1. [Using Stata Data Files](using_stata_files.html)
+2. [Numerical Formats](numerical_formats.html)
+3. [Quality Control](quality_control.html)
+4. [Relative References](relative_references.html)
