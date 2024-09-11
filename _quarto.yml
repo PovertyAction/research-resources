@@ -23,13 +23,13 @@ website:
   reader-mode: false
   search:
     show-item-context: true
-    location: sidebar
+    location: navbar
     type: textbox
     limit: 20
   page-footer:
     left: |
       Brought to you by
-      [![](../../assets/images/IPA-primary-color-RGB.png){fig-alt="IPA" width=65px}](https://poverty-action.org)
+      [![](../../../assets/images/IPA-primary-color-RGB.png){fig-alt="IPA" width=65px}](https://poverty-action.org)
     # center:
     #   - text: "About"
     #     href: about.qmd
@@ -62,22 +62,22 @@ website:
         href: docs/about/index.qmd
       # - text: "Guides"
       #   href: docs/guides/index.qmd
-      - text: "Software Guides"
-        href: docs/software/index.qmd
+      # - text: "Software Guides"
+      #   href: docs/software/index.qmd
       # - text: "Methods"
       #   href: docs/methods/index.qmd
-      - text: "Research Design"
-        href: docs/research_design/index.qmd
-      - text: "Ethics & Data Security"
-        href: docs/ethics_&_data_security/index.qmd
-      - text: "Measurement & Survey Design"
-        href: docs/measurement_&_survey_design/index.qmd
-      - text: "Data Collection Methods"
-        href: docs/data_collection_methods/index.qmd
-      - text: "Data Management"
-        href: docs/data_management/index.qmd
-      - text: "Publication & Policy"
-        href: docs/publication_&_policy/index.qmd
+      # - text: "Research Design"
+      #   href: docs/research_design/index.qmd
+      # - text: "Ethics & Data Security"
+      #   href: docs/ethics_&_data_security/index.qmd
+      # - text: "Measurement & Survey Design"
+      #   href: docs/measurement_&_survey_design/index.qmd
+      # - text: "Data Collection Methods"
+      #   href: docs/data_collection_methods/index.qmd
+      # - text: "Data Management"
+      #   href: docs/data_management/index.qmd
+      # - text: "Publication & Policy"
+      #   href: docs/publication_&_policy/index.qmd
       
     right:
       - text: "IPA Teams"
@@ -119,146 +119,208 @@ website:
           - text: "For IPA staff"
             href: docs/about/ipa_staff.qmd
 
-
-    - id: guides
-      collapse-level: 1
-      contents:
-        - section: "Guides"
-          href: docs/guides/index.qmd
-          contents:
-            - text: "Coding Best Practices"
-              href: docs/guides/coding_best_practices.qmd
-            - text: "Code Review"
-              href: docs/guides/code_review.qmd
-
-    - id: software
+    - id: research
+      style: "floating"
       collapse-level: 3
+      align: left
+
       contents:
-        - section: "Software"
-          href: docs/software/index.qmd
-          contents:
-            - section: "Programming"
-              contents:
-                - text: "Python"
-                  href: docs/software/python.qmd
-                - text: "Stata"
-                  href: docs/software/stata.qmd
-                - text: "SQL"
-                  href: docs/software/sql.qmd
+        - section: "Research Resources"
+          href: index.qmd
+          
+          contents: 
+          - section: "Guides"
+            href: docs/guides/index.qmd
+            contents:
+              - text: "Coding Best Practices"
+                href: docs/guides/coding_best_practices.qmd
+              - text: "Code Review"
+                href: docs/guides/code_review.qmd
 
-            - section: "Data Collection"
-              contents:
-                - section: "SurveyCTO"
-                  contents:
-                    - text: "About SurveyCTO"
-                      href: docs/software/surveycto/index.md
-                    - text: "SurveyCTO: Best Practices"
-                      href: docs/software/surveycto/scto_best_practices.qmd
-                    - text: "SurveyCTO: IPA Tools"
-                      href: docs/software/surveycto/scto_tools.qmd
+          - section: "Software"
+            href: docs/software/index.qmd
+            contents:
+              - section: "Programming"
+                contents:
+                  - text: "Python"
+                    href: docs/software/python.qmd
+                  - text: "Stata"
+                    href: docs/software/stata.qmd
+                  - text: "SQL"
+                    href: docs/software/sql.qmd
 
-            - section: Tools
-              contents:
-                - text: "Computer Setup"
-                  href: docs/software/computer_setup.qmd
-                - text: "Virtual Environments"
-                  href: docs/software/venv.qmd
-                - text: "Git"
-                  href: docs/software/git.qmd
-                - text: "GitHub"
-                  href: docs/software/github.qmd
-                - text: "VS Code"
-                  href: docs/software/vscode.qmd
-                - text: "Quarto"
-                  href: docs/software/quarto.qmd
-                - text: "Just"
-                  href: docs/software/justfile.qmd
-                - text: "Pre-commit"
-                  href: docs/software/pre_commit_hooks.qmd
+              - section: "Data Collection"
+                contents:
+                  - section: "SurveyCTO"
+                    contents:
+                      - text: "About SurveyCTO"
+                        href: docs/software/surveycto/index.qmd
+                      - text: "SurveyCTO: Best Practices"
+                        href: docs/software/surveycto/scto_best_practices.qmd
+                      - text: "SurveyCTO: IPA Tools"
+                        href: docs/software/surveycto/scto_tools.qmd
 
-    - id: methods
-      collapse-level: 2
-      contents:
-        - section: "Methods"
-          href: docs/methods/index.qmd
-          contents:
-            - text: "Machine Learning"
-              href: docs/methods/ml.qmd
-            - text: "References"
-              href: docs/methods/references.qmd
+              - section: Tools
+                contents:
+                  - text: "Computer Setup"
+                    href: docs/software/computer_setup.qmd
+                  - text: "Virtual Environments"
+                    href: docs/software/venv.qmd
+                  - text: "Git"
+                    href: docs/software/git.qmd
+                  - text: "GitHub"
+                    href: docs/software/github.qmd
+                  - text: "VS Code"
+                    href: docs/software/vscode.qmd
+                  - text: "Quarto"
+                    href: docs/software/quarto.qmd
+                  - text: "Just"
+                    href: docs/software/justfile.qmd
+                  - text: "Pre-commit"
+                    href: docs/software/pre_commit_hooks.qmd
 
-    - id: data_collection_methods
-      collapse-level: 3
-      contents:
-        - section: "Data Collection Methods"
-          href: docs/data_collection_methods/index.qmd
-          contents:
-            - section: "WhatsApp Surveys"
-              href: docs/data_collection_methods/whatsapp_surveys/index.qmd
-              contents:
-                - text: "Getting Started With WhatsApp Surveys"
-                  href: docs/data_collection_methods/whatsapp_surveys/getting_started_with_whatsapp_surveys.qmd
-                - text: "The Twilio Console"
-                  href: docs/data_collection_methods/whatsapp_surveys/the_twilio_console.qmd
-                - text: "How To Program A WhatsApp Survey"
-                  href: docs/data_collection_methods/whatsapp_surveys/how_to_program_a_whatsapp_survey.qmd
-                - text: "Launching A WhatsApp Survey"
-                  href: docs/data_collection_methods/whatsapp_surveys/launching_a_whatsapp_survey.qmd
-                - text: "Encryption And Data Security In WhatsApp Surveys"
-                  href: docs/data_collection_methods/whatsapp_surveys/encryption_and_data_security_in_whatsapp_surveys.qmd
-            
-            - section: "Qualitate Research"
-              href: docs/data_collection_methods/qualitative_research/index.qmd
-              contents:
-                - text: "Introduction"
-                  href: docs/data_collection_methods/qualitative_research/introduction.qmd
-                
-                - section: "Best Practices Guides"
-                  href: docs/data_collection_methods/qualitative_research/best_practices_guides/index.qmd
-                  contents:
-                    - text: "Focus Groups"
-                      href: docs/data_collection_methods/qualitative_research/best_practices_guides/focus_groups.qmd
-                    - text: "Interviews"
-                      href: docs/data_collection_methods/qualitative_research/best_practices_guides/interviews.qmd
-                    - text: "Observations"
-                      href: docs/data_collection_methods/qualitative_research/best_practices_guides/observations.qmd
-                    - text: "Rapid Ethnographies"
-                      href: docs/data_collection_methods/qualitative_research/best_practices_guides/rapid_ethnographies.qmd
+          - section: "Methods"
+            href: docs/methods/index.qmd
+            contents:
+              - text: "Machine Learning"
+                href: docs/methods/ml.qmd
+              - text: "References"
+                href: docs/methods/references.qmd
 
-
-
-
+          - section: "Data Collection Methods"
+            href: docs/data_collection_methods/index.qmd
+            contents:
+              - section: "WhatsApp Surveys"
+                href: docs/data_collection_methods/whatsapp_surveys/index.qmd
+                contents:
+                  - text: "Getting Started With WhatsApp Surveys"
+                    href: docs/data_collection_methods/whatsapp_surveys/getting_started_with_whatsapp_surveys.qmd
+                  - text: "The Twilio Console"
+                    href: docs/data_collection_methods/whatsapp_surveys/the_twilio_console.qmd
+                  - text: "How To Program A WhatsApp Survey"
+                    href: docs/data_collection_methods/whatsapp_surveys/how_to_program_a_whatsapp_survey.qmd
+                  - text: "Launching A WhatsApp Survey"
+                    href: docs/data_collection_methods/whatsapp_surveys/launching_a_whatsapp_survey.qmd
+                  - text: "Encryption And Data Security In WhatsApp Surveys"
+                    href: docs/data_collection_methods/whatsapp_surveys/encryption_and_data_security_in_whatsapp_surveys.qmd
+              
+              - section: "Qualitate Research"
+                href: docs/data_collection_methods/qualitative_research/index.qmd
+                contents:
+                  - section: "Best Practices Guides"
+                    href: docs/data_collection_methods/qualitative_research/best_practices_guides/index.qmd
+                    contents:
+                      - text: "Focus Groups"
+                        href: docs/data_collection_methods/qualitative_research/best_practices_guides/focus_groups.qmd
+                      - text: "Interviews"
+                        href: docs/data_collection_methods/qualitative_research/best_practices_guides/interviews.qmd
+                      - text: "Observations"
+                        href: docs/data_collection_methods/qualitative_research/best_practices_guides/observations.qmd
+                      - text: "Rapid Ethnographies"
+                        href: docs/data_collection_methods/qualitative_research/best_practices_guides/rapid_ethnographies.qmd
 
 
-    - id: data_management
-      collapse-level: 2
-      contents:
-        - section: "Data Management"
-          href: docs/data_management/index.qmd
-    
-    - id: ethics_&_data_security
-      collapse-level: 2
-      contents:
-        - section: "Ethics & Data Security"
-          href: docs/ethics_&_data_security/index.qmd
+          - section: "Data Management"
+            href: docs/data_management/index.qmd
+            contents: 
+              - section: "Data Cleaning"
+                href: docs/data_management/data_cleaning/index.qmd
+                contents: 
+                  - section: "Raw Data Management"
+                    href: docs/data_management/data_cleaning/raw_data_management/index.qmd
+                    contents: 
+                      - text: "Importing Into Stata"
+                        href: docs/data_management/data_cleaning/raw_data_management/importing_into_stata.qmd
+                      - text: "Removing Incomplete And Test Surveys"
+                        href: docs/data_management/data_cleaning/raw_data_management/remove_test_surveys.qmd
+                      - text: "Data Structure And Reshaping"
+                        href: docs/data_management/data_cleaning/raw_data_management/data_structure_and_reshaping.qmd
+                      - text: "Add Or Replace Data"
+                        href: docs/data_management/data_cleaning/raw_data_management/add_or_replace_data.qmd
+                      - text: "SurveyCTO Split"
+                        href: docs/data_management/data_cleaning/raw_data_management/surveycto_split.qmd
+                      - text: "Unique IDs"
+                        href: docs/data_management/data_cleaning/raw_data_management/unique_ids.qmd
+                      - text: "Importing Into Stata"
+                        href: docs/data_management/data_cleaning/raw_data_management/importing_into_stata.qmd
+                      - text: "De-Identifying Data"
+                        href: docs/data_management/data_cleaning/raw_data_management/deidentifying_data.qmd
+                  
+                  - section: "Variable Management"
+                    href: docs/data_management/data_cleaning/variable_management/index.qmd
+                    contents:
+                      - text: "Missing Values"
+                        href: docs/data_management/data_cleaning/variable_management/missing_values.qmd
+                      - text: "Categorical Variables"
+                        href: docs/data_management/data_cleaning/variable_management/categorical_variables.qmd
+                      - text: "Specify Variables"
+                        href: docs/data_management/data_cleaning/variable_management/specify_variables.qmd
+                      - text: "Skip Logic"
+                        href: docs/data_management/data_cleaning/variable_management/skip_logic.qmd
+                      - text: "Storage Types and Dates"
+                        href: docs/data_management/data_cleaning/variable_management/storage_types.qmd
+                      - text: "Logic Tests"
+                        href: docs/data_management/data_cleaning/variable_management/logic_tests.qmd
+                      
+                  - section: "Dataset Documentation"
+                    href: docs/data_management/data_cleaning/dataset_documentation/index.qmd
+                    contents:
+                      - text: "Variable Names"
+                        href: docs/data_management/data_cleaning/dataset_documentation/variable_names.qmd
+                      - text: "Variable Labels"
+                        href: docs/data_management/data_cleaning/dataset_documentation/variable_labels.qmd
+                      - text: "Variable Metadata"
+                        href: docs/data_management/data_cleaning/dataset_documentation/variable_metadata.qmd
+                      - text: "Value Labels"
+                        href: docs/data_management/data_cleaning/dataset_documentation/value_labels.qmd
+                      - text: "Dataset Management"
+                        href: docs/data_management/data_cleaning/dataset_documentation/dataset_management.qmd
+                  
+                  - section: Data Aggregation
+                    href: docs/data_management/data_cleaning/data_aggregation/index.qmd
+                    contents:
+                      - text: "Merging Two Datasets"
+                        href: docs/data_management/data_cleaning/data_aggregation/merging_two_datasets.qmd
+                      - text: "Fuzzy Merge"
+                        href: docs/data_management/data_cleaning/data_aggregation/fuzzy_merge.qmd
+                      - text: "Appending"
+                        href: docs/data_management/data_cleaning/data_aggregation/appending.qmd
+                  
+                  - section: "Outcome Creation"
+                    href: "docs/data_management/data_cleaning/outcome_creation/index.qmd"
+                    contents:
+                      - text: "Sorting"
+                        href: docs/data_management/data_cleaning/outcome_creation/sorting.qmd
+                      - text: "Collapsing"
+                        href: docs/data_management/data_cleaning/outcome_creation/collapsing.qmd
 
-    - id: measurement_&_survey_design
-      collapse-level: 2
-      contents:
-        - section: "Measurement & Survey Design"
-          href: docs/measurement_&_survey_design/index.qmd
-      
-    - id: research_design
-      collapse-level: 2
-      contents:
-        - section: "Research Design"
-          href: docs/research_design/index.qmd
+                  - section: "Coding In Stata"
+                    href: docs/data_management/data_cleaning/coding_in_stata/index.qmd
+                    contents:
+                      - text: "Using Stata Files"
+                        href: docs/data_management/data_cleaning/coding_in_stata/using_stata_files.qmd
+                      - text: "Numerical Formats"
+                        href: docs/data_management/data_cleaning/coding_in_stata/numerical_formats.qmd
+                      - text: "Quality Control"
+                        href: docs/data_management/data_cleaning/coding_in_stata/quality_control.qmd
+                      - text: "Relative References"
+                        href: docs/data_management/data_cleaning/coding_in_stata/relative_references.qmd
+                      
 
-    - id: publication_&_policy
-      collapse-level: 2
-      contents:
-        - section: "Publication & Policy"
-          href: docs/publication_&_policy/index.qmd
+                      
+                        
+                       
+          - section: "Ethics & Data Security"
+            href: docs/ethics_&_data_security/index.qmd
+
+          - section: "Measurement & Survey Design"
+            href: docs/measurement_&_survey_design/index.qmd
+        
+          - section: "Research Design"
+            href: docs/research_design/index.qmd
+
+          - section: "Publication & Policy"
+            href: docs/publication_&_policy/index.qmd
 
 # bibliography: ./assets/references.bib
 
