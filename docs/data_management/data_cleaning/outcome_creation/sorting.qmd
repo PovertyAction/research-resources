@@ -11,7 +11,7 @@ editors:
 # Add your name to the list if you have contributed to this page
 author:
   - "[Michael Rosenbaum](https://github.com/mfrosenbaum)"
-  - "[Wildingka](https://github.com/wildingka)"
+  - "[Kayla Wilding](https://github.com/wildingka)"
   - "[Rosemarie Sandino](https://github.com/rsandino)"
 ---
  

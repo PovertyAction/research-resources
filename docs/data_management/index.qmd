@@ -8,7 +8,7 @@ editors:
 # Authors are the "Contributors" of the page
 # Add your name to the list if you have contributed to this page
 author:
-  - "[David Torres](https://poverty-action.org/people/david-francisco-torres-leon)"
+  - "[Wesley Kirui](https://poverty-action.org/people/david-francisco-torres-leon)"
 ---
 
 ## Data Management
