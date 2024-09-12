@@ -1,6 +1,5 @@
 ---
-title: Data Management
-
+title: Introduction To Qualitative Research
 # Editors are the "Maintainers" of the page
 editors:
   - "[Wesley Kirui](https://poverty-action.org/people/wesley-kirui)"
@@ -8,11 +7,5 @@ editors:
 # Authors are the "Contributors" of the page
 # Add your name to the list if you have contributed to this page
 author:
-  - "[Wesley Kirui](https://poverty-action.org/people/david-francisco-torres-leon)"
+  - "[David Torres](https://poverty-action.org/people/david-francisco-torres-leon)"
 ---
-
-## Data Management
-
-Topics covered in these section are:
-
-1. **[Data Cleaning](./data_cleaning/index.html)**

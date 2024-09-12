@@ -1,0 +1,23 @@
+---
+title: Remove Incomplete And Test Surveys
+execute: 
+  enabled: false
+
+# Editors are the "Maintainers" of the page
+editors:
+  - "[Wesley Kirui](https://poverty-action.org/people/wesley-kirui)"
+
+# Authors are the "Contributors" of the page
+# Add your name to the list if you have contributed to this page
+author:
+  - "[Michael Rosenbaum](https://github.com/mfrosenbaum)"
+  - "[Kayla Wilding](https://github.com/wildingka)"
+  - "[Rosemarie Sandino](https://github.com/rsandino)"
+---
+
+
+## Remove Incomplete and Test Surveys
+
+Sometimes incomplete surveys will sneak into the raw datasets, either because they weren’t removed from the paper stack of surveys of because someone uploaded them to the server. 
+
+Likewise, during the initial stages of testing for computer-assisted interviewing (CAI), RAs may test the program and upload the resulting surveys to the server. Check with the RA who fielded the survey to identify and remove any test surveys. Remove any incomplete surveys as well, which you can likely identify by key variables at the end of the survey that are missing.
